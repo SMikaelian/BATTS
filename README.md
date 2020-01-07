@@ -6,4 +6,4 @@ Ballistic Acquisition Telemetry and Trajectory System using an Arduino to report
 * What communication protocol should be used by each device?
 * What is the range of the radios being used?
 * What devices are being used?
- - Currently: Arduino Mega 2560, Teensy 3.2, 3R 915MHz radios, and the MPU-9250 board.
+	- Currently: Arduino Mega 2560, Teensy 3.2, 3R 915MHz radios, and the MPU-9250 board.
