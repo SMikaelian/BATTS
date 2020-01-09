@@ -55,26 +55,27 @@ void loop() {
   Serial1.print(arrRPY[2]);
   Serial1.println(">\n");
   */
-
+  Serial1.print("< ");
   Serial1.print(IMU.getAccelX_mss(),6);
-  Serial1.print("\t");
+  Serial1.print(", ");
   Serial1.print(IMU.getAccelY_mss(),6);
-  Serial1.print("\t");
+  Serial1.print(", ");
   Serial1.print(IMU.getAccelZ_mss(),6);
-  Serial1.print("\t");
+  Serial1.print(", ");
   Serial1.print(IMU.getGyroX_rads(),6);
-  Serial1.print("\t");
+  Serial1.print(", ");
   Serial1.print(IMU.getGyroY_rads(),6);
-  Serial1.print("\t");
+  Serial1.print(", ");
   Serial1.print(IMU.getGyroZ_rads(),6);
-  Serial1.print("\t");
+  Serial1.print(", ");
   Serial1.print(IMU.getMagX_uT(),6);
-  Serial1.print("\t");
+  Serial1.print(", ");
   Serial1.print(IMU.getMagY_uT(),6);
-  Serial1.print("\t");
+  Serial1.print(", ");
   Serial1.print(IMU.getMagZ_uT(),6);
-  Serial1.print("\t");
-  Serial1.println(IMU.getTemperature_C(),6);
+  Serial1.print(", ");
+  Serial1.print(IMU.getTemperature_C(),6);
+  Serial1.println(" >");
   delay(100);
   
   
@@ -87,25 +88,27 @@ void loop() {
   Serial.print("|");
   Serial.println(arrRPY[2]);
   */
+  Serial.print("< ");
   Serial.print(IMU.getAccelX_mss(),6);
-  Serial.print("\t");
+  Serial.print(", ");
   Serial.print(IMU.getAccelY_mss(),6);
-  Serial.print("\t");
+  Serial.print(", ");
   Serial.print(IMU.getAccelZ_mss(),6);
-  Serial.print("\t");
+  Serial.print(", ");
   Serial.print(IMU.getGyroX_rads(),6);
-  Serial.print("\t");
+  Serial.print(", ");
   Serial.print(IMU.getGyroY_rads(),6);
-  Serial.print("\t");
+  Serial.print(", ");
   Serial.print(IMU.getGyroZ_rads(),6);
-  Serial.print("\t");
+  Serial.print(", ");
   Serial.print(IMU.getMagX_uT(),6);
-  Serial.print("\t");
+  Serial.print(", ");
   Serial.print(IMU.getMagY_uT(),6);
-  Serial.print("\t");
+  Serial.print(", ");
   Serial.print(IMU.getMagZ_uT(),6);
-  Serial.print("\t");
-  Serial.println(IMU.getTemperature_C(),6);
+  Serial.print(", ");
+  Serial.print(IMU.getTemperature_C(),6);
+  Serial.println(" >");
   delay(100);
   
 }
