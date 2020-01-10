@@ -15,10 +15,17 @@ float arrRPY[9];     // Array to store roll, pitch & yaw values
 void setup()
 {
 
+  Serial3.begin(115200);
   // Opening up serial port
   Serial1.begin(57600);
 
   while(!Serial1) {}
+
+  while (*gpsStream)
+    if (gps.encode(*gpsStream++))
+      displayInfo();
+
+  Serial.println("Done with GPS Setup");
 
   status = IMU.begin();
   if (status < 0) {
