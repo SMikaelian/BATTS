@@ -34,11 +34,11 @@ void setup()
   }
 
 
-  Serial.println("Goodnight moon!");
+  Serial.println("Initiating..");
 
   // set the data rate for the SoftwareSerial port
   mySerial.begin(57600);
-  mySerial.println("Hello, world?");
+  mySerial.println("Hello, do you copy?");
 }
 
 void loop() // run over and over
