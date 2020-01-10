@@ -18,6 +18,7 @@ Planning:
 *	What sensors are being used with the Teensy?
 	*	MPU9250 Board
 	*	[ADXL345 Board](https://learn.sparkfun.com/tutorials/adxl345-hookup-guide/all). [Datasheet for the IC](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf?_ga=2.189572520.200845294.1578683318-1747185889.1578374771). [Listing for the board we used](https://ns-electric.com/product/9-dof-imu-mpu9250/).
+	*	BN-88 GPS/Compass Module
 
 
 Priority I:
@@ -29,7 +30,7 @@ Priority II:
 
 Data is output to the serial monitor according to the same scheme it’s sent to the radio transmitter. Eg.
 
-< A.x, A.y, A.z | G.x, G.y, G.z | M.x, M.y, Mz | AD.x, AD.y, AD.z >
+< A.x, A.y, A.z , G.x, G.y, G.z , M.x, M.y, Mz , AD.x, AD.y, AD.z, Temperature >
 
 The characters ‘<‘ and ‘>’ have ASCII values 60 and 62, which can be detected when parsing the data. If there is a loss of some of the data.
 
