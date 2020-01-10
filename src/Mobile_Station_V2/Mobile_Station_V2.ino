@@ -1,6 +1,7 @@
+
 #include <MPU9250.h>
 #include <TinyGPS++.h>
-#include <Wire.h>
+//#include <Wire.h>
 
 
 
@@ -28,6 +29,7 @@ void setup()
   Serial3.begin(115200);
   // Opening up serial port
   Serial1.begin(57600);
+  Serial.begin(9600);
 
   while(!Serial1) {}
 
@@ -55,8 +57,8 @@ void loop() {
     if (gps.encode(*gpsStream++))
       displayInfo();
 
-  Serial.println();
-  Serial.println(F("Location Transmitted."));
+  Serial3.println();
+  Serial3.println(F("Location Transmitted."));
 //  // Roll pin mapping
 //  arrRPY[0] = analogRead(RPYPin[0]);
 //  arrRPY[0] = map(arrRPY[0], 0, 1023, -10.00, 10.00);
@@ -138,51 +140,51 @@ void loop() {
 
 void displayInfo()
 {
-  Serial.print(F("Location: ")); 
+  Serial3.print(F("Location: ")); 
   if (gps.location.isValid())
   {
-    Serial.print(gps.location.lat(), 6);
-    Serial.print(F(","));
-    Serial.print(gps.location.lng(), 6);
+    Serial3.print(gps.location.lat(), 6);
+    Serial3.print(F(","));
+    Serial3.print(gps.location.lng(), 6);
   }
   else
   {
-    Serial.print(F("INVALID"));
+    Serial3.print(F("INVALID"));
   }
 
-  Serial.print(F("  Date/Time: "));
+  Serial3.print(F("  Date/Time: "));
   if (gps.date.isValid())
   {
-    Serial.print(gps.date.month());
-    Serial.print(F("/"));
-    Serial.print(gps.date.day());
-    Serial.print(F("/"));
-    Serial.print(gps.date.year());
+    Serial3.print(gps.date.month());
+    Serial3.print(F("/"));
+    Serial3.print(gps.date.day());
+    Serial3.print(F("/"));
+    Serial3.print(gps.date.year());
   }
   else
   {
-    Serial.print(F("INVALID"));
+    Serial3.print(F("INVALID"));
   }
 
-  Serial.print(F(" "));
+  Serial3.print(F(" "));
   if (gps.time.isValid())
   {
-    if (gps.time.hour() < 10) Serial.print(F("0"));
-    Serial.print(gps.time.hour());
-    Serial.print(F(":"));
-    if (gps.time.minute() < 10) Serial.print(F("0"));
-    Serial.print(gps.time.minute());
-    Serial.print(F(":"));
-    if (gps.time.second() < 10) Serial.print(F("0"));
-    Serial.print(gps.time.second());
-    Serial.print(F("."));
-    if (gps.time.centisecond() < 10) Serial.print(F("0"));
-    Serial.print(gps.time.centisecond());
+    if (gps.time.hour() < 10) Serial3.print(F("0"));
+    Serial3.print(gps.time.hour());
+    Serial3.print(F(":"));
+    if (gps.time.minute() < 10) Serial3.print(F("0"));
+    Serial3.print(gps.time.minute());
+    Serial3.print(F(":"));
+    if (gps.time.second() < 10) Serial3.print(F("0"));
+    Serial3.print(gps.time.second());
+    Serial3.print(F("."));
+    if (gps.time.centisecond() < 10) Serial3.print(F("0"));
+    Serial3.print(gps.time.centisecond());
   }
   else
   {
-    Serial.print(F("INVALID"));
+    Serial3.print(F("INVALID"));
   }
 
-  Serial.println();
+  Serial3.println();
 }
