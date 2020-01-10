@@ -6,8 +6,8 @@
 MPU9250 IMU(Wire,0x68);
  int status;
 
-int RPYPin[3];        // Array to store connection pins
-float arrRPY[3];     // Array to store roll, pitch & yaw values
+int RPYPin[9];        // Array to store connection pins
+float arrRPY[9];     // Array to store roll, pitch & yaw values
 
 void setup()
 {
@@ -35,17 +35,17 @@ void setup()
 }
 
 void loop() {
-  // Roll pin mapping
-  arrRPY[0] = analogRead(RPYPin[0]);
-  arrRPY[0] = map(arrRPY[0], 0, 1023, -10.00, 10.00);
-  // Pitch pin mapping
-  arrRPY[1] = analogRead(RPYPin[1]);
-  arrRPY[1] = map(arrRPY[1], 0, 1023, -10.00, 10.00);
-  // Yaw pin mapping
-  arrRPY[2] = analogRead(RPYPin[2]);
-  arrRPY[2] = map(arrRPY[2], 0, 1023, -10.00, 10.00);
-
-  // Print data serially (Wireless)
+//  // Roll pin mapping
+//  arrRPY[0] = analogRead(RPYPin[0]);
+//  arrRPY[0] = map(arrRPY[0], 0, 1023, -10.00, 10.00);
+//  // Pitch pin mapping
+//  arrRPY[1] = analogRead(RPYPin[1]);
+//  arrRPY[1] = map(arrRPY[1], 0, 1023, -10.00, 10.00);
+//  // Yaw pin mapping
+//  arrRPY[2] = analogRead(RPYPin[2]);
+//  arrRPY[2] = map(arrRPY[2], 0, 1023, -10.00, 10.00);
+//
+//  // Print data serially (Wireless)
   /*
   Serial1.print("<");
   Serial1.print(arrRPY[0]);
@@ -55,6 +55,8 @@ void loop() {
   Serial1.print(arrRPY[2]);
   Serial1.println(">\n");
   */
+
+  IMU.readSensor();
   Serial1.print("< ");
   Serial1.print(IMU.getAccelX_mss(),6);
   Serial1.print(", ");
@@ -76,8 +78,7 @@ void loop() {
   Serial1.print(", ");
   Serial1.print(IMU.getTemperature_C(),6);
   Serial1.println(" >");
-  delay(100);
-  
+  Serial1.
   
   // Print data serially (USB port)
   /*
