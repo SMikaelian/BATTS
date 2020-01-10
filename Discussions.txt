@@ -2,4 +2,5 @@ USB to TTL Converter:
 The Arduino and your medical device are both USB "slaves",  and you need a USB "master" to control them.  
 That's usually a PC,  but there are some embedded systems with "master" capability.  Unfortunately,  the Arduino isn't one of them.
 You might pop open your other gadget,  and discover that it also has something like your Arduino's USB-to-serial chip,  making it possible to bypass their USB interfaces and go serial-to-serial.
-Or you might find it's something completely different.  But there's no simple way to do it
+Or you might find it's something completely different.  But there's no simple way to do it.\
+
