@@ -24,19 +24,19 @@ void setup()
   Serial.println(F("BasicExample.ino"));
   Serial.println(F("Basic demonstration of TinyGPS++ (no device needed)"));
   Serial.print(F("Testing TinyGPS++ library v. ")); Serial.println(TinyGPSPlus::libraryVersion());
-  Serial.println(F("by Mikal Hart"));
   Serial.println();
 
-  while (*gpsStream)
-    if (gps.encode(*gpsStream++))
-      displayInfo();
 
-  Serial.println();
-  Serial.println(F("Done."));
 }
 
 void loop()
 {
+    while (*gpsStream)
+    if (gps.encode(*gpsStream++))
+      displayInfo();
+
+  Serial.println();
+  Serial.println(F("Location Transmitted."));
 }
 
 void displayInfo()
