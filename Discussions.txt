@@ -4,3 +4,5 @@ That's usually a PC,  but there are some embedded systems with "master" capabili
 You might pop open your other gadget,  and discover that it also has something like your Arduino's USB-to-serial chip,  making it possible to bypass their USB interfaces and go serial-to-serial.
 Or you might find it's something completely different.  But there's no simple way to do it.\
 
+Data is output to the serial monitor according to the same scheme it’s sent to the radio transmitter. Eg.
+< A.x, A.y, A.z | G.x, G.y, G.z | M.x, M.y, Mz | AD.x, AD.y, AD.z >
