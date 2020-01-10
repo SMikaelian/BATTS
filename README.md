@@ -14,6 +14,12 @@ Questions:
 -If we were to receive data from the computer, how would it be graphed?
 
 
+Planning:
+*	What sensors are being used with the Teensy?
+	*	MPU9250 Board
+	*	[ADXL345 Board](https://learn.sparkfun.com/tutorials/adxl345-hookup-guide/all). [Datasheet for the IC](https://www.sparkfun.com/datasheets/Sensors/Accelerometer/ADXL345.pdf?_ga=2.189572520.200845294.1578683318-1747185889.1578374771). [Listing for the board we used](https://ns-electric.com/product/9-dof-imu-mpu9250/).
+
+
 Priority I:
 -Transmission of data from the Teensy 3.2 to an Arduino using the 3DR radio transmitter/receiver.
 
@@ -39,6 +45,7 @@ Priority III:
 *	Arduino Library [Wire.h](https://www.arduino.cc/en/reference/wire)
 *	[Teensyduino Installation](https://www.pjrc.com/teensy/td_download.html)
 *	[MPU9250 Library](https://github.com/bolderflight/MPU9250) (uses FIFO scheme) [MPU-9250 Datasheet](https://www.invensense.com/wp-content/uploads/2015/02/PS-MPU-9250A-01-v1.1.pdf)
+*	Another [MPU9250 Library](https://github.com/kriswiner/MPU9250)
 *	[Serial inputs on Arduino](https://www.norwegiancreations.com/2017/12/arduino-tutorial-serial-inputs/)
 *	[Serial.available()](https://www.arduino.cc/reference/en/language/functions/communication/serial/available/)
 *	[USB Device send/read data](https://forum.arduino.cc/index.php?topic=16202.0)
