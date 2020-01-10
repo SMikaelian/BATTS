@@ -3,15 +3,15 @@ Ballistic Acquisition Telemetry and Trajectory System using an Arduino to report
 
 
 Questions:
--How should each axis of data be mapped?
--What communication protocol is each component of the project using?
--How will the data be collected from the Arduino?
--How does the Beitan GPS work? How do we print data from it to the serial monitor repeatedly?
--How does the Serial*.available() function work?
--How many devices can the Mega handle?
--At what baud rate is the data optimally received at from each device?
--What have we learned so far?
--If we were to receive data from the computer, how would it be graphed?
+* How should each axis of data be mapped?
+* What communication protocol is each component of the project using?
+* How will the data be collected from the Arduino?
+* How does the Beitan GPS work? How do we print data from it to the serial monitor repeatedly?
+* How does the Serial*.available() function work?
+* How many devices can the Mega handle?
+* At what baud rate is the data optimally received at from each device?
+* What have we learned so far?
+* If we were to receive data from the computer, how would it be graphed?
 
 
 Planning:
