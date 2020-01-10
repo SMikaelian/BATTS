@@ -1,20 +1,19 @@
-
+#include <TinyGPS++.h>
 #include <Wire.h>
 #include "MPU9250.h"
+
+
+// The TinyGPS++ object
+TinyGPSPlus gps;
 
 
 MPU9250 IMU(Wire,0x68);
  int status;
 
-int RPYPin[9];        // Array to store connection pins
 float arrRPY[9];     // Array to store roll, pitch & yaw values
 
 void setup()
 {
-  // Defining analog pins
-  RPYPin[0] = 0;
-  RPYPin[1] = 1;
-  RPYPin[2] = 2;
 
   // Opening up serial port
   Serial1.begin(57600);
