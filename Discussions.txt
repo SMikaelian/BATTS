@@ -2,4 +2,17 @@ USB to TTL Converter:
 The Arduino and your medical device are both USB "slaves",  and you need a USB "master" to control them.  
 That's usually a PC,  but there are some embedded systems with "master" capability.  Unfortunately,  the Arduino isn't one of them.
 You might pop open your other gadget,  and discover that it also has something like your Arduino's USB-to-serial chip,  making it possible to bypass their USB interfaces and go serial-to-serial.
-Or you might find it's something completely different.  But there's no simple way to do it
+Or you might find it's something completely different.  But there's no simple way to do it.\
+
+Data is output to the serial monitor according to the same scheme it’s sent to the radio transmitter. Eg.
+< A.x, A.y, A.z | G.x, G.y, G.z | M.x, M.y, Mz | AD.x, AD.y, AD.z >
+
+How should each axis of data be mapped?
+What communication protocol is each component of the project using?
+How will the data be collected from the Arduino?
+How does the Beitan GPS work? How do we print data from it to the serial monitor repeatedly?
+How does the Serial*.available() function work?
+How many devices can the Mega handle?
+At what baud rate is the data optimally received at from each device?
+What have we learned so far?
+If we were to receive data from the computer, how would it be graphed?
