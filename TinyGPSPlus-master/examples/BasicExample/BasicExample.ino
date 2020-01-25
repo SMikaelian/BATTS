@@ -26,7 +26,6 @@ void setup()
   Serial.print(F("Testing TinyGPS++ library v. ")); Serial.println(TinyGPSPlus::libraryVersion());
   Serial.println();
 
-
 }
 
 void loop()
