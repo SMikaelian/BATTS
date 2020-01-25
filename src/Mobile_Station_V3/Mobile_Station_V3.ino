@@ -75,9 +75,8 @@ void loop() {
   Serial1.print(", ");
   Serial1.print(IMU.getMagZ_uT(),6);
   Serial1.print(", ");
-  Serial1.print(IMU.getTemperature_C(),6);
+//  Serial1.print(IMU.getTemperature_C(),6);
   Serial1.println(" >");
-  Serial1.
   
   // Print data serially (USB port)
   /*
