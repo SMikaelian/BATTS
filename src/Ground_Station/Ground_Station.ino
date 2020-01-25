@@ -4,7 +4,7 @@
 // SETUP:
 //  ________________________            _______________________
 // |       TRANSMITTER      |          |        RECEIVER       |
-// | Teensy 3.0 + MPU6050 + | -------> | Arduino Mega 2560 R3 + |
+// | Teensy 3.0 + MPU6050 + | -------> | Arduino Mega 2560 R3 +|
 // | 3DR  915MHz Air Module | -------> | 3DR 915MHz Air Module |
 // |________________________|          |_______________________|
 //
