@@ -34,17 +34,17 @@ void setup()
 }
 
 void loop() {
-//  // Roll pin mapping
-//  arrRPY[0] = analogRead(RPYPin[0]);
-//  arrRPY[0] = map(arrRPY[0], 0, 1023, -10.00, 10.00);
-//  // Pitch pin mapping
-//  arrRPY[1] = analogRead(RPYPin[1]);
-//  arrRPY[1] = map(arrRPY[1], 0, 1023, -10.00, 10.00);
-//  // Yaw pin mapping
-//  arrRPY[2] = analogRead(RPYPin[2]);
-//  arrRPY[2] = map(arrRPY[2], 0, 1023, -10.00, 10.00);
+  // Roll pin mapping
+  arrRPY[0] = analogRead(RPYPin[0]);
+  arrRPY[0] = map(arrRPY[0], 0, 1023, -10.00, 10.00);
+  // Pitch pin mapping
+  arrRPY[1] = analogRead(RPYPin[1]);
+  arrRPY[1] = map(arrRPY[1], 0, 1023, -10.00, 10.00);
+  // Yaw pin mapping
+  arrRPY[2] = analogRead(RPYPin[2]);
+  arrRPY[2] = map(arrRPY[2], 0, 1023, -10.00, 10.00);
 //
-//  // Print data serially (Wireless)
+  // Print data serially (Wireless)
   /*
   Serial1.print("<");
   Serial1.print(arrRPY[0]);

@@ -1,10 +1,10 @@
-#include <TinyGPS++.h>
+//#include <TinyGPS++.h>
 #include <Wire.h>
 #include "MPU9250.h"
 
 
 // The TinyGPS++ object
-TinyGPSPlus gps;
+//TinyGPSPlus gps;
 
 
 MPU9250 IMU(Wire,0x68);
@@ -15,15 +15,16 @@ float arrRPY[9];     // Array to store roll, pitch & yaw values
 void setup()
 {
 
-  Serial3.begin(115200);
+//  Serial3.begin(115200);
   // Opening up serial port
+  Serial.begin(57600);
   Serial1.begin(57600);
 
   while(!Serial1) {}
 
-  while (*gpsStream)
-    if (gps.encode(*gpsStream++))
-      displayInfo();
+//  while (*gpsStream)
+//    if (gps.encode(*gpsStream++))
+//      displayInfo();
 
   Serial.println("Done with GPS Setup");
 
@@ -84,7 +85,7 @@ void loop() {
   Serial1.print(", ");
   Serial1.print(IMU.getTemperature_C(),6);
   Serial1.println(" >");
-  Serial1.
+
   
   // Print data serially (USB port)
   /*
@@ -117,5 +118,18 @@ void loop() {
   Serial.print(IMU.getTemperature_C(),6);
   Serial.println(" >");
   delay(100);
+
+  // Roll pin mapping
+  arrRPY[0] = IMU.getAccelX_mss();
+  arrRPY[0] = map(arrRPY[0], 0, 1023, -10.00, 10.00);
+  // Pitch pin mapping
+  arrRPY[1] = IMU.getAccelY_mss();
+  arrRPY[1] = map(arrRPY[1], 0, 1023, -10.00, 10.00);
+  // Yaw pin mapping
+  arrRPY[2] = IMU.getGyroY_rads();
+  arrRPY[2] = map(arrRPY[2], 0, 1023, -10.00, 10.00);  
+
+  Serial.print("Test: ");
+  Serial.print(arrRPY[0]);
   
 }
